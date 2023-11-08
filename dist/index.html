@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="main.js" defer></script>
     <title>Weather App</title>
 </head>
 <body>
     <div class="content">
-        <h1>Content</h1>
+        <h1>Wetter App</h1>
+
+        <div class="formContent">
+            <form action="#">
+                <label for="cityInput">Hier eine Stadt eingeben</label>
+                <input type="text" name="cityInput" id="cityInput" placeholder="London,UK">
+                
+                <button type="submit" id="submitButton">SUBMIT</button>
+            </form>
+        </div>
+        <div class="valueContent" id="valueContent">
+            <h1 id="1"></h1>
+        </div>
     </div>
   
 </body>
