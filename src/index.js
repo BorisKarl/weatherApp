@@ -1,14 +1,33 @@
 import { getWeather } from "./modules/apiFunctions";
 import { getWeatherInfo } from "./modules/domFunctions";
 
-const test = document.getElementById('1');
+
+const cleanInput = (input) => {
+    
+     input = input
+     .replace(/(\s+$|^\s+)/g, '') // remove whitespace from begining and end of string
+      .replace(/(,\s+)/g, ',') // remove any white space that follows a comma
+      .replace(/(\s+,)/g, ','); // remove any white space that preceeds a comma
+
+      console.log(input);
+
+      const firstLetter = input[0].toUpperCase();
+      const city = firstLetter + input.substring(1);
+
+      console.log(city);
+      return city; 
+
+}
 
 const submitButton = document.getElementById('submitButton');
-    const cityInput = document.getElementById('cityInput');
-    submitButton.addEventListener('click', () => {
-        getWeather(cityInput.value);
-    })
+    
+submitButton.addEventListener('click', () => {
+        const input = document.getElementById('cityInput').value;
+        console.log("Aus der cleanInput Funktion" + cleanInput(input));
+        getWeather(cleanInput(input));
+    
+        
+});
 
-test.textContent = "Test";
 
-
+cleanInput("wasser, marsch");
