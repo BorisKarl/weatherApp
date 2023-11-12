@@ -1,7 +1,5 @@
 import { getWeather } from "./apiFunctions"
 
-
-
 const getWeatherInfo = (input) => {
     const submitButton = document.getElementById('submitButton');
     const cityInput = document.getElementById('cityInput');
@@ -10,5 +8,4 @@ const getWeatherInfo = (input) => {
     })
 
 }
-
 export { getWeatherInfo }

@@ -9,6 +9,7 @@ const cityDOM = document.getElementById("city");
 const tempDOM = document.getElementById("temp");
 const timeDOM = document.getElementById("time");
 const cloudsDOM = document.getElementById("clouds");
+const input = document.getElementById('cityInput');
 
 async function getWeather(city) {
   try {
@@ -32,6 +33,7 @@ async function getWeather(city) {
           2
         )} seconds to fetch and display the data.`
       );
+      // input.innerHTML = "";
     }
   } catch (error) {
     console.error();

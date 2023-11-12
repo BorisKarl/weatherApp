@@ -13,11 +13,13 @@ const cleanInput = (input) => {
       return city; 
 }
 
-const submitButton = document.getElementById('submitButton');
+ const input = document.getElementById('cityInput');
     
-submitButton.addEventListener('click', () => {
-        const input = document.getElementById('cityInput').value;
-        console.log("Aus der cleanInput Funktion " + cleanInput(input));
-        getWeather(cleanInput(input));
+input.addEventListener('keypress', (event) => {
+       if (event.key === "Enter") {
+         console.log("Aus der cleanInput Funktion " + cleanInput(input.value));
+         getWeather(cleanInput(input.value));
+         input.value = "";
+         input.blur();
+       }
 });
-
