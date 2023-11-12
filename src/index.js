@@ -14,6 +14,12 @@ const cleanInput = (input) => {
 }
 
  const input = document.getElementById('cityInput');
+
+ window.addEventListener('keypress', () => {
+  if (cityDOM.innerHTML === ""){
+    input.focus();
+  }
+});
     
 input.addEventListener('keypress', (event) => {
        if (event.key === "Enter") {
@@ -26,6 +32,8 @@ input.addEventListener('keypress', (event) => {
 
 input.addEventListener('click', () => {
   if (cityDOM.innerHTML !== ""){
-    input.value = ""
+    input.value = "";
   }
-})
+});
+
+
