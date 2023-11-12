@@ -16,8 +16,10 @@ async function getWeather(city) {
     const t1 = performance.now();
     const response = await fetch(url + city + urlContinue, { mode: "cors" });
     if (response.status === 404) {
-      content.innerHTML = "<h1>Stadt nicht gefunden</h1>";
-      location.reload();
+      content.innerHTML = "<h1>Can't find city, try again!</h1>";
+      setTimeout(() => {
+       location.reload();
+      }, 2000);
     } else {
       const weatherData = await response.json();
       cityDOM.innerHTML = weatherData.name + ", " + weatherData.sys.country;
@@ -28,12 +30,6 @@ async function getWeather(city) {
       timeDOM.textContent = `It took ${((t2 - t1) / 6000).toFixed(
         2
       )} seconds to fetch and display the data.`;
-      console.log(
-        `It took ${((t2 - t1) / 6000).toFixed(
-          2
-        )} seconds to fetch and display the data.`
-      );
-      // input.innerHTML = "";
     }
   } catch (error) {
     console.error();
@@ -42,4 +38,4 @@ async function getWeather(city) {
   }
 }
 
-export { getWeather };
+export { getWeather, cityDOM };
