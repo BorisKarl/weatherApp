@@ -8,6 +8,7 @@ const content = document.getElementById("valueContent");
 const cityDOM = document.getElementById("city");
 const tempDOM = document.getElementById("temp");
 const timeDOM = document.getElementById("time");
+const cloudsDOM = document.getElementById("clouds");
 
 async function getWeather(city) {
   try {
@@ -21,11 +22,15 @@ async function getWeather(city) {
       cityDOM.innerHTML = weatherData.name + ", " + weatherData.sys.country;
       tempDOM.innerHTML = Math.round(weatherData.main.temp) + " &degC";
       const t2 = performance.now();
-      timeDOM.textContent = `Wetter api hat ${((t2 - t1) / 6000).toFixed(
+      console.log(weatherData);
+      cloudsDOM.innerHTML = weatherData.weather[0].description;
+      timeDOM.textContent = `It took ${((t2 - t1) / 6000).toFixed(
         2
-      )} Sekunden gedauert...`;
+      )} seconds to fetch and display the data.`;
       console.log(
-        `Wetter api hat ${((t2 - t1) / 6000).toFixed(2)} Sekunden gedauert...`
+        `It took ${((t2 - t1) / 6000).toFixed(
+          2
+        )} seconds to fetch and display the data.`
       );
     }
   } catch (error) {

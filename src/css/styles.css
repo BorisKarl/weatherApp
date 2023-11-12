@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Neutraface Text', sans-serif;
+    font-size: larger;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    height: 80vh;
+    
+}
+
+.formContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.valueContent {
+    text-align: center;
+}
