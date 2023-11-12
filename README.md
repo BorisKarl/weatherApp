@@ -5,4 +5,4 @@ A simple **weatherapp** build with **javascript** and the **openWeatherApi**.
 - **modules**
 - **webpack**
 
-[Check it out here!](https://boriskarl.github.io/weatherApp/dist/)https://boriskarl.github.io/weatherApp/dist/)
+[Check it out here!](https://boriskarl.github.io/weatherApp/dist/)
