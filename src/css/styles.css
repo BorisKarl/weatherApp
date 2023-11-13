@@ -37,19 +37,19 @@
         width: 90%;
         font-size: medium;
     }
-        .formContent {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
+    .formContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
     #cityInput {
         width: 70%;
     }
     .valueContent {
         width: 70%;
         display: block;
-        text-align: start;
+        text-align: center;
         text-wrap: wrap;
         margin-left: auto;
         margin-right: auto;
