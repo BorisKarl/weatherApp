@@ -2,17 +2,18 @@
     margin: 0;
     padding: 0;
     font-family: 'Neutraface Text', sans-serif;
-    font-size: larger;
+    width: 100%;
 }
 
 .content {
+    width: 100%;
+    font-size: larger;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1em;
     margin-top: 10%;
-    width: 100vw;
     position: absolute;
     
 }
@@ -25,4 +26,19 @@
 
 .valueContent {
     text-align: center;
+}
+
+
+@media screen and (max-width: 480px) {
+    .content{
+        width: 90%;
+        font-size: medium;
+    }
+    #cityInput {
+        width: 60%;
+    }
+    .valueContent {
+        text-align: start;
+        text-wrap: wrap;
+    }
 }
