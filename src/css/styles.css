@@ -51,5 +51,7 @@
         display: block;
         text-align: start;
         text-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
