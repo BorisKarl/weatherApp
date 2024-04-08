@@ -35,13 +35,24 @@
     margin-top: 2%;
 }
 
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /*background-color: rgba(0, 0, 0, 0.3);*/
+  padding: 1%;
+  color: black;
+  text-align: center;
+}
+
 @media screen and (max-width: 480px) {
+
     .content{
         display: block;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-        width: 90%;
         font-size: medium;
     }
     .formContent {
@@ -50,8 +61,10 @@
         align-items: center;
         width: 100%;
     }
+
     #cityInput {
         width: 70%;
+
     }
     .valueContent {
         margin-top: 2%;
