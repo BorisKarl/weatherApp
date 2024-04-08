@@ -1,0 +1,4 @@
+const api_key = "2398f3d056c8d161f94aadd37333d0d3";
+const urlContinue = "&APPID=2398f3d056c8d161f94aadd37333d0d3&units=metric";
+const hard_code_key =
+  "api.openweathermap.org/data/2.5/weather?q=Graz,au&APPID=2398f3d056c8d161f94aadd37333d0d3&units=metric";

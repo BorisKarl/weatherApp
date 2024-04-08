@@ -1,8 +1,6 @@
-const api_key = "2398f3d056c8d161f94aadd37333d0d3";
-const hard_code_key =
-  "api.openweathermap.org/data/2.5/weather?q=Graz,au&APPID=2398f3d056c8d161f94aadd37333d0d3&units=metric";
+const api_key = "xxx";
 const url = "https://api.openweathermap.org/data/2.5/weather?q=";
-const urlContinue = "&APPID=2398f3d056c8d161f94aadd37333d0d3&units=metric";
+const urlContinue = "xxx";
 
 const content = document.getElementById("valueContent");
 const cityDOM = document.getElementById("city");
